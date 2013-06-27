@@ -7,4 +7,5 @@ Vagrant.configure("2") do |config|
   config.vm.provision :shell, :path => "scripts/update.sh"
   config.vm.provision :shell, :path => "scripts/nginx.sh"
   config.vm.provision :shell, :path => "scripts/mysql.sh"
+  config.vm.provision :shell, :path => "scripts/node.sh"
 end
