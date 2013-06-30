@@ -9,4 +9,8 @@ Vagrant.configure("2") do |config|
   config.vm.provision :shell, :path => "scripts/mysql.sh"
   config.vm.provision :shell, :path => "scripts/node.sh"
   config.vm.provision :shell, :path => "scripts/node-service.sh"
+  # port for nginx
+  config.vm.network :forwarded_port, guest: 80, host: 10080
+  # port for Node.js service
+  config.vm.network :forwarded_port, guest: 3000, host: 13000
 end
